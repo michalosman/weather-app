@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather APP</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/4c536a6bd5.js"
       crossorigin="anonymous"
@@ -12,30 +18,25 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="page-name">Weather App</h1>
+      <h1 class="page-name"><i class="fas fa-cloud-sun"></i>Weather App</h1>
     </header>
     <main class="main">
       <form class="form" novalidate>
-        <input type="text" placeholder="Enter city name" />
+        <input
+          class="input"
+          type="text"
+          placeholder="Enter city name"
+          required
+        />
         <button class="btn btn-submit" type="submit">Search</button>
       </form>
       <div class="search-result">
-        <h3 class="city-name">Wroclaw</h3>
-        <p class="temperature">23°C</p>
-        <p class="feels-like">21°C</p>
-        <p class="humidity">42%</p>
-        <p class="wind">10 km/h</p>
+        <h3>Wroclaw</h3>
+        <p>Temperature: 23°C</p>
+        <p>Feels like: 21°C</p>
+        <p>Humidity: 42%</p>
+        <p>Wind: 10 km/h</p>
       </div>
     </main>
-    <footer class="footer">
-      <p class="copyright">Copyright © 2021 michalosman</p>
-      <a
-        href="https://github.com/michalosman"
-        class="github-link"
-        target="_blank"
-      >
-        <i class="github-icon fab fa-github"></i
-      ></a>
-    </footer>
   </body>
 </html>

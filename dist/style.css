@@ -1,0 +1,121 @@
+:root {
+  --primary-light: #faf3e0;
+  --secondary-light: #acb4f4;
+  --primary-dark: #1e212d;
+  --secondary-dark: #6870e0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--secondary-dark);
+}
+
+header {
+  font-family: "Antic Slab", serif;
+  font-size: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+button,
+input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Header */
+
+.header {
+  padding: 2rem;
+  background-color: var(--primary-dark);
+  color: var(--secondary-light);
+}
+
+.page-name {
+  text-align: center;
+}
+
+.page-name i {
+  color: var(--primary-light);
+  margin-right: 1rem;
+}
+
+/* Main */
+
+.main {
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.form {
+  padding: 1rem;
+  text-align: center;
+}
+
+.input {
+  margin-right: 0.5rem;
+  background-color: var(--secondary-light);
+  color: var(--primary-dark);
+  border: 2px solid transparent;
+}
+
+.btn {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  transition: border 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  border: 2px solid var(--secondary-light);
+}
+
+.search-result {
+  max-width: 300px;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 4rem auto;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search-result * {
+  padding: 0.5rem;
+}
+
+.search-result h3 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.search-result p {
+  font-size: 2rem;
+}
