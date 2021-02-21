@@ -11,5 +11,5 @@ searchForm.addEventListener("submit", (e) => {
 
 searchBtn.addEventListener("click", async () => {
   const weatherData = await weather.getData(searchInput.value);
-  view.setWeatherInfo(weatherData);
+  view.setSearchResult(weatherData);
 });
