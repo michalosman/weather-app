@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script src="main.js" defer></script>
     <script
       src="https://kit.fontawesome.com/4c536a6bd5.js"
       crossorigin="anonymous"
@@ -21,14 +22,17 @@
       <h1 class="page-name"><i class="fas fa-cloud-sun"></i>Weather App</h1>
     </header>
     <main class="main">
-      <form class="form" novalidate>
+      <form class="form" id="searchForm" novalidate>
         <input
           class="input"
+          id="searchInput"
           type="text"
           placeholder="Enter city name"
           required
         />
-        <button class="btn btn-submit" type="submit">Search</button>
+        <button class="btn btn-submit" id="searchBtn" type="submit">
+          Search
+        </button>
       </form>
       <div class="search-result">
         <h3>Wroclaw</h3>
