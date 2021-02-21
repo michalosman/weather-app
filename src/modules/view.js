@@ -1,21 +1,21 @@
 const view = (() => {
   function setSearchResult(weatherData) {
-    if (!weatherData || !weatherData.name) return;
+    if (!weatherData) return;
 
     const searchResult = document.getElementById("searchResult");
+    searchResult.classList.add("active");
+
     const cityName = document.getElementById("cityName");
     const temperature = document.getElementById("temperature");
     const feelsLike = document.getElementById("feelsLike");
     const humidity = document.getElementById("humidity");
     const wind = document.getElementById("wind");
 
-    searchResult.classList.add("active");
-
-    cityName.textContent = `${weatherData.name}`;
-    temperature.textContent = `Temperature: ${weatherData.main.temp}°C`;
-    feelsLike.textContent = `Fells like: ${weatherData.main.feels_like}°C`;
-    humidity.textContent = `Humidity: ${weatherData.main.humidity}%`;
-    wind.textContent = `Wind: ${weatherData.wind.speed} km/h`;
+    cityName.textContent = `${weatherData.cityName}`;
+    temperature.textContent = `Temperature: ${weatherData.temperature}°C`;
+    feelsLike.textContent = `Fells like: ${weatherData.feelsLike}°C`;
+    humidity.textContent = `Humidity: ${weatherData.humidity}%`;
+    wind.textContent = `Wind: ${weatherData.windSpeed} km/h`;
   }
 
   return { setSearchResult };

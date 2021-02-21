@@ -1,17 +1,21 @@
 const weather = (() => {
+  function convertData(data) {
+    const {
+      name: cityName,
+      main: { temp: temperature, feels_like: feelsLike, humidity },
+      wind: { speed: windSpeed },
+    } = data;
+    return { cityName, temperature, feelsLike, humidity, windSpeed };
+  }
+
   async function getData(city) {
+    const endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=28fe7b5f9a78838c639143fc517e4343`;
+
     try {
-      if (city === "") throw new Error("Empty input");
-
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=28fe7b5f9a78838c639143fc517e4343`,
-        { mode: "cors" },
-      );
-
+      const response = await fetch(endpoint, { mode: "cors" });
       if (!response.ok) throw new Error("City not found");
-
       const data = await response.json();
-      return data;
+      return convertData(data);
     } catch (error) {
       alert(error);
       return null;
