@@ -12,9 +12,9 @@ const view = (() => {
     const wind = document.getElementById("wind");
 
     cityName.textContent = `${weatherData.cityName}`;
-    temperature.textContent = `Temperature: ${weatherData.temperature}°C`;
-    feelsLike.textContent = `Fells like: ${weatherData.feelsLike}°C`;
-    humidity.textContent = `Humidity: ${weatherData.humidity}%`;
+    temperature.textContent = `${weatherData.temperature} °C`;
+    feelsLike.textContent = `Fells like: ${weatherData.feelsLike} °C`;
+    humidity.textContent = `Humidity: ${weatherData.humidity} %`;
     wind.textContent = `Wind: ${weatherData.windSpeed} km/h`;
   }
 
