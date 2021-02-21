@@ -1,7 +1,7 @@
-import weather from "./weather";
-
 const view = (() => {
   function setSearchResult(weatherData) {
+    if (!weatherData || !weatherData.name) return;
+
     const searchResult = document.getElementById("searchResult");
     const cityName = document.getElementById("cityName");
     const temperature = document.getElementById("temperature");
