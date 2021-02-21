@@ -1,16 +1,15 @@
 import weather from "./weather";
 
 const view = (() => {
-  // const searchResult = document.getElementById("searchResult");
-
   function setSearchResult(weatherData) {
+    const searchResult = document.getElementById("searchResult");
     const cityName = document.getElementById("cityName");
     const temperature = document.getElementById("temperature");
     const feelsLike = document.getElementById("feelsLike");
     const humidity = document.getElementById("humidity");
     const wind = document.getElementById("wind");
 
-    console.log(weatherData);
+    searchResult.classList.add("active");
 
     cityName.textContent = `${weatherData.name}`;
     temperature.textContent = `Temperature: ${weatherData.main.temp}°C`;
