@@ -98,6 +98,7 @@ button {
 }
 
 .search-result {
+  display: none;
   max-width: 300px;
   padding: 1rem;
   border-radius: 5px;
@@ -105,6 +106,10 @@ button {
   background-color: var(--primary-dark);
   color: var(--primary-light);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search-result.active {
+  display: block;
 }
 
 .search-result * {
