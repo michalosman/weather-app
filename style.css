@@ -100,7 +100,7 @@ button {
 .search-result {
   display: none;
   max-width: 300px;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 5px;
   margin: 4rem auto;
   background-color: var(--primary-dark);
